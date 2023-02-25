@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+
+<body>
+    {{> header }}
+
+    <main class="main">
+
+        <section class="flex:col pad-tb-20">
+            <div class="flex:col-max">
+                <button class="btn-black btn-modal-imgs_js" data-id="uploads" data-choice="once" data-type-file="jpg|jpeg|webp|png|svg|mp4|ogg|mov">Контент Одна штука (картинки и медиа)</button>
+            </div>
+        </section>
+
+        <section class="flex:col pad-tb-20">
+            <div class="flex:col-max">
+                <button class="btn-black btn-modal-imgs_js" data-id="uploads" data-choice="many" data-type-file="jpg|jpeg|webp|png|svg|mp4|ogg|mov">Контент Галерея (картинки и медиа)</button>
+            </div>
+        </section>
+
+        <section class="flex:col pad-tb-20">
+            <div class="flex:col-max">
+                <button class="btn-black btn-modal-imgs_js" data-id="uploads" data-choice="many" data-type-file="jpg|jpeg|webp|png|svg">Контент Галерея (только картинки)</button>
+            </div>
+        </section>
+
+        <section class="flex:col pad-tb-20">
+            <div class="flex:col-max">
+                <button class="btn-black btn-modal-imgs_js" data-id="uploads" data-choice="many" data-type-file="doc|pdf|txt|xlsx">Контент (только документы)</button>
+            </div>
+        </section>
+
+        <section class="flex:col pad-tb-20">
+            <div class="flex:col-max">
+                <button class="btn-black btn-modal-imgs_js" data-id="uploads" data-choice="many">Контент (выбор в редактор)</button>
+            </div>
+        </section>
+
+        <div class="modal-imgs modal-imgs_js">
+            <div class="modal-img">
+
+                <div class="modal-img__head">
+
+                    <div class="modal-img__head-item">
+
+                        <div class="modal-img__head-name">
+                            Файл Менеджер
+                        </div>
+
+                        <button class="btn-modal-close modal-img__btn-close modal-img-btn-close_js">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48">
+                                <path d="m12.45 37.65-2.1-2.1L21.9 24 10.35 12.45l2.1-2.1L24 21.9l11.55-11.55 2.1 2.1L26.1 24l11.55 11.55-2.1 2.1L24 26.1Z" />
+                            </svg>
+                        </button>
+
+                    </div>
+
+                    <div class="modal-img__head-item">
+
+                        <div class="modal-img__head-breadcrumbs">
+                            <ul class="list-breadcrumbs_js">
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-img__head-item">
+
+                        <div class="modal-img__head-item-inner">
+
+                            <div class="modal-img__ui-btns">
+
+                                <button class="modal-img__btn-folder active">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48">
+                                        <path d="M7 40q-1.15 0-2.075-.925Q4 38.15 4 37V11q0-1.15.925-2.075Q5.85 8 7 8h14.05l3 3H41q1.15 0 2.075.925Q44 12.85 44 14H7v23l5.1-20H47l-5.35 20.7q-.3 1.2-1.1 1.75T38.5 40Z" />
+                                    </svg>
+                                </button>
+
+                                <button class="modal-img__btn-img-upload">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48">
+                                        <path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h20.45v8.55h4.05v4.05H42V39q0 1.2-.9 2.1-.9.9-2.1.9Zm3-8.1h24l-7.2-9.6-6.35 8.35-4.7-6.2Zm23-16.8v-4.05h-4.05v-3H35V6h3v4.05h4.05v3H38v4.05Z" />
+                                    </svg>
+                                </button>
+
+                                <button class="modal-img__btn-folder-upload">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48">
+                                        <path d="M28.5 32h3v-4.5H36v-3h-4.5V20h-3v4.5H24v3h4.5ZM7.05 40q-1.2 0-2.1-.925-.9-.925-.9-2.075V11q0-1.15.9-2.075Q5.85 8 7.05 8h14l3 3h17q1.15 0 2.075.925.925.925.925 2.075v23q0 1.15-.925 2.075Q42.2 40 41.05 40Z" />
+                                    </svg>
+                                </button>
+
+                            </div>
+
+                            <div class="modal-img__filter modal-img-filter_js">
+
+                                <div class="select-custom select-custom_js modal-img__field select-user_js">
+                                    <select name="" id="">
+                                        <option value="1">Все медиафайлы</option>
+                                        <option value="jpg|jpeg|png|gif|bmp|webp">Изображения</option>
+                                        <option value="mp3|mpga|m4a|ac3|aiff|mid|ogg|wav">Аудио</option>
+                                        <option value="mov|mpeg|m4v|mp4|avi|mpg|wma|webm">Видео</option>
+                                        <option value="doc|docx|rtf|pdf|xls|xlsx|txt|csv|ppt|pptx">Документы</option>
+                                        <option value="xls|xlsx|csv">Таблицы</option>
+                                        <option value="zip|rar|gz|tar|dmg">Архивы</option>
+                                    </select>
+                                </div>
+
+                                <div class="select-custom select-custom_js modal-img__field select-params_js">
+                                    <select name="" id="">
+                                        <option value="1">Все</option>
+                                        <option value="2">По размеру (возрастание)</option>
+                                        <option value="3">По размеру (убывание)</option>
+                                        <option value="4">По дате загрузки (возрастание)</option>
+                                        <option value="5">По дате загрузки (убывание)</option>
+                                    </select>
+                                </div>
+
+                                <div class="modal-img__add-files">
+                                    <div class="modal-img__add-info">
+                                        <p>Выбрано (<span class="modal-img-add-num_js">0</span>)</p>
+                                    </div>
+
+                                    <button class="modal-img__add-btn modal-btn-add_js">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" width="48">
+                                            <path d="M450 856V606H200v-60h250V296h60v250h250v60H510v250h-60Z" />
+                                        </svg>
+                                    </button>
+
+                                    <button class="modal-img__add-btn modal-btn-remove_js">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" width="48">
+                                            <path d="M200 606v-60h560v60H200Z" />
+                                        </svg>
+                                    </button>
+
+                                    <button class="modal-img__add-btn modal-btn-delete_js">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48">
+                                            <path d="m361 757 119-121 120 121 47-48-119-121 119-121-47-48-120 121-119-121-48 48 120 121-120 121 48 48ZM261 936q-24 0-42-18t-18-42V306h-41v-60h188v-30h264v30h188v60h-41v570q0 24-18 42t-42 18H261Z" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="input modal-img__field-wrap">
+                            <div class="input modal-img__field  modal-img__field-search">
+                                <input class="input__field modal-img-search_js" type="text" placeholder="Поиск по названию файла">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-img__content">
+
+                    <div class="modal-img__content-inner">
+                        <div class="modal-img__content-cards content-cards_js"></div>
+                    </div>
+
+                    <div class="modal-img__cards-view cards-view_js"></div>
+
+                </div>
+
+                <div class="modal-img__footer">
+                    <div class="modal-img__footer-item">
+                        <div class="radio">
+                            <label class="radio__label">
+                                <input class="radio__input radio-user-selected_js" type="radio" name="radioInput" checked value="1">
+                                <span class="radio__round"></span>
+
+                                <p>Все файлы</p>
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label class="radio__label">
+                                <input class="radio__input radio-user-selected_js" type="radio" name="radioInput" value="434">
+                                <span class="radio__round"></span>
+
+                                <p>Мои файлы</p>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="modal-img__footer-item">
+                        <button class="btn-accent-3 btn-accent-border">Отменить</button>
+                        <button class="btn-accent-3">Выбрать</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    {{> footer }}
+    {{> scripts }}
+
+</body>
+
+</html>

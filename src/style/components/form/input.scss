@@ -1,0 +1,55 @@
+// inputs
+.input {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: max-content;
+
+    transition: 0.3s all ease;
+
+    &__label {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    & input,
+    & textarea {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        padding: 20px 20px;
+
+        outline: none;
+        border: 1px solid $accent-2;
+        border-radius: 5px;
+
+        background: transparent;
+
+        color: $black;
+        font-size: 16px;
+
+        transition: 0.3s all ease;
+
+        &::placeholder {
+            color: $black;
+        }
+
+        &:focus,
+        &.active {
+            border-color: $accent-3 !important;
+
+            & .input__fake-field-icon {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    & textarea {
+        height: 195px;
+        resize: none;
+    }
+}
